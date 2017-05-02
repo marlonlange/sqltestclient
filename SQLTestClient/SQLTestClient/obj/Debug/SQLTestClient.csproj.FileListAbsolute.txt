@@ -1,0 +1,14 @@
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\bin\Debug\SQLTestClient.exe.config
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\bin\Debug\SQLTestClient.exe
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\bin\Debug\SQLTestClient.pdb
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.csprojResolveAssemblyReference.cache
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\MainWindow.g.cs
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\App.g.cs
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient_MarkupCompile.cache
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient_MarkupCompile.lref
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\MainWindow.baml
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.g.resources
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.Properties.Resources.resources
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.csproj.GenerateResource.Cache
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.exe
+C:\Users\langem\Documents\Übungen\C#\SQLTestClient\SQLTestClient\obj\Debug\SQLTestClient.pdb
