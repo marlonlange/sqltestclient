@@ -19,26 +19,45 @@
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="groupBox" Header="Aktionen" Margin="5" Padding="10" Grid.Column="0" Grid.Row="0">
             <Grid>
-                <Button x:Name="button" Content="Transaktion öffnen" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="110"/>
-                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="136,47,-43,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="button" Content="Transaktion öffnen" Command="{Binding TransactionCommand}" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="110"/>
+                <Button x:Name="button1" Content="INSERT ausführen" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="110"/>
+                <Button x:Name="button2" Content="Commit" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="75"/>
 
             </Grid>
         </GroupBox>
         <GroupBox x:Name="groupBox1" Header="Connection String" Margin="5" Padding="10" Grid.Column="1" Grid.Row="0">
-            <StackPanel Orientation="Vertical">
-                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="TextBox" Width="120"/>
-                <CheckBox x:Name="checkBox" Content="MultiSubnetFailover"/>
-                <CheckBox x:Name="checkBox1" Content="ConnectionRetryCount"/>
-            </StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Server" Grid.Column="0" Grid.Row="0"></Label>
+                <TextBox x:Name="txtServer" TextWrapping="Wrap" Text="{Binding server, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0"/>
+                <Label Content="Datenbank" Grid.Column="0" Grid.Row="1"></Label>
+                <TextBox x:Name="txtDatabase" TextWrapping="Wrap" Text="{Binding database, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="1"/>
+                <Label Content="User" Grid.Column="0" Grid.Row="2"></Label>
+                <TextBox x:Name="txtUser" TextWrapping="Wrap" Text="{Binding user, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="2"/>
+                <Label Content="Passwort" Grid.Column="0" Grid.Row="3"></Label>
+                <TextBox x:Name="txtPasswort" TextWrapping="Wrap" Text="{Binding password, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3"/>
+                <Button Content="Verbinden" Command="{Binding ConnectCommand}" Grid.Column="1" Grid.Row="4"></Button>
+            </Grid>
         </GroupBox>
         <GridSplitter Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Height="5"></GridSplitter>
         <GroupBox x:Name="groupBox2" Margin="5" Padding="5" Header="Ausgabe" Grid.ColumnSpan="2" Grid.Row="2">
-            <RichTextBox IsReadOnly="True"></RichTextBox>
+            <ScrollViewer>
+                <TextBlock x:Name="outputBox" Text="{Binding output}"></TextBlock>
+            </ScrollViewer>
         </GroupBox>
         <StatusBar Grid.ColumnSpan="2" Grid.Row="3" Height="25">
             <StatusBarItem>
-                <TextBlock>Server erreichbar: </TextBlock>
+                <TextBlock Text="{Binding availabilityStatus}"></TextBlock>
             </StatusBarItem>
         </StatusBar>
 

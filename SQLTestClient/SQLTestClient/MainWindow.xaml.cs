@@ -20,9 +20,12 @@ namespace SQLTestClient
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = mvm;
         }
     }
 }
